@@ -97,10 +97,14 @@ Only the provided event data: tracking, plays, players, games and PFF scouting. 
 
 ### Run it
 ```bash
+git clone https://github.com/Mohit555000/man-beater-score.git
+cd man-beater-score
+git clone https://github.com/ThompsonJamesBliss/nfl-big-data-bowl-regional-event-data.git
 pip install -r requirements.txt
-python run.py --data path/to/data        # folder containing tracking/, plays.csv, players.csv, games.csv, pffScoutingData.csv
+python run.py --data nfl-big-data-bowl-regional-event-data/data
 ```
-It takes about 20 seconds and writes everything to `outputs/`.
-Code: `manbeater/data.py` (loading + target from play description), `manbeater/features.py` (route features), `manbeater/score.py` (expected-separation model, score, validation, `time_to_open`, `open_but_ignored`), `manbeater/viz.py` (charts + tool), `run.py` (pipeline).
+It takes about 20–30 seconds and writes everything to `outputs/`.
 
-New outputs: `outputs/time_to_open.png` / `time_to_open.csv` and `outputs/open_but_ignored.png` / `open_but_ignored.csv`.
+Code: `manbeater/data.py` (loading + target from play description), `manbeater/features.py` (route features), `manbeater/score.py` (expected-separation model, score, validation, `time_to_open`, `open_but_ignored`), `manbeater/viz.py` (charts + tools), `run.py` (pipeline).
+
+Outputs: `leaderboard.png`, `why_it_matters.png`, `coverage_split.png`, `time_to_open.png`, `open_but_ignored.png`, `example_play.png`, `compare_tool.html`, `head_to_head.html`, plus CSVs and `summary.md`.
