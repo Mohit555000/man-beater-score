@@ -81,6 +81,7 @@ Open [`outputs/compare_tool.html`](outputs/compare_tool.html) in a browser. It p
 
 ### Data
 Only the provided event data: tracking, plays, players, games and PFF scouting. No outside data.
+**Source:** [nfl-big-data-bowl-regional-event-data](https://github.com/ThompsonJamesBliss/nfl-big-data-bowl-regional-event-data/tree/main) (NFL Next Gen Stats tracking + PFF scouting, 2021 season weeks 1–8).
 - **Targeted receiver:** read from `playDescription` ("… pass short left to C.Godwin …") and matched to that play's route runners by name. It finds the target on 94% of pass attempts; checked once against public play-by-play while building it (not used by the project), it agreed on 100% of the 6,715 passes compared.
 - **Pass depth:** the targeted receiver's depth downfield at the throw (tracking ends 0.5 s after the throw, so the ball's landing spot isn't available).
 - **Outcome:** `passResult` (catch or not) and `prePenaltyPlayResult` (yards gained).
